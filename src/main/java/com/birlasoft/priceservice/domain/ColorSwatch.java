@@ -1,9 +1,7 @@
 package com.birlasoft.priceservice.domain;
 import com.birlasoft.priceservice.config.Config;
 import com.birlasoft.priceservice.deserializers.ColorSwatchDeserializer;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonMerge;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 @JsonIgnoreProperties(ignoreUnknown = true)

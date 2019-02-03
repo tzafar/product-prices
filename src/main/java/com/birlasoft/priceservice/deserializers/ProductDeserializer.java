@@ -2,7 +2,6 @@ package com.birlasoft.priceservice.deserializers;
 
 import com.birlasoft.priceservice.config.Config;
 import com.birlasoft.priceservice.domain.ColorSwatch;
-import com.birlasoft.priceservice.domain.NowPrice;
 import com.birlasoft.priceservice.domain.Price;
 import com.birlasoft.priceservice.domain.Product;
 import com.fasterxml.jackson.core.JsonParser;
@@ -12,8 +11,6 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.TextNode;
-
-import javax.xml.soap.Text;
 import java.io.IOException;
 import java.util.Arrays;
 

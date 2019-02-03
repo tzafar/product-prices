@@ -5,10 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import java.util.List;
-import java.util.Map;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonDeserialize(using = ProductDeserializer.class)

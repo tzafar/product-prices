@@ -2,7 +2,6 @@ package com.birlasoft.priceservice.deserializers;
 
 import com.birlasoft.priceservice.config.Config;
 import com.birlasoft.priceservice.domain.ColorSwatch;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.TreeNode;
