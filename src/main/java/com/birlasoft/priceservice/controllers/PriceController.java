@@ -23,7 +23,7 @@ public class PriceController {
 
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value = "Ger price for products")
-    @ApiResponses(value = {@ApiResponse(code = 200, message = "Products")},{@ApiResponse(code = 400 , message = "no products found")})
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "Products"),@ApiResponse(code = 400 , message = "no products found")})
     @ResponseBody
     @GetMapping("/prices")
     public ResponseEntity getProducts(@RequestParam (required = false ) String priceLabel) throws IOException {
