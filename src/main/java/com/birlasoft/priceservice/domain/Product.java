@@ -1,20 +1,65 @@
 package com.birlasoft.priceservice.domain;
 
+import com.birlasoft.priceservice.deserializers.ProductDeserializer;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Map;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonDeserialize(using = ProductDeserializer.class)
 public class Product {
 
     @JsonProperty("productId")
     private String id;
     private String title;
-    private Price price;
+    private String nowPrice;
+
     private List<ColorSwatch> colorSwatches;
+    private String priceLabel;
+
+    @JsonIgnore
+    private String priceReduction;
+    @JsonIgnore
+    private Price price;
+    @JsonIgnore
+    private String currency;
+
+    public String getPriceReduction() {
+        return priceReduction;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public String getPriceLabel() {
+        return priceLabel;
+    }
+
+    public void setPriceLabel(String priceLabel) {
+        this.priceLabel = priceLabel;
+    }
+
+    public Price getPrice() {
+        return price;
+    }
+
+    public void setPrice(Price price) {
+        this.price = price;
+    }
+
+    public void setPriceReduction(String priceReduction) {
+        this.priceReduction = priceReduction;
+    }
 
     public String getId() {
         return id;
@@ -32,12 +77,12 @@ public class Product {
         this.title = title;
     }
 
-    public Price getPrice() {
-        return price;
+    public String getNowPrice() {
+        return nowPrice;
     }
 
-    public void setPrice(Price price) {
-        this.price = price;
+    public void setNowPrice(String nowPrice) {
+        this.nowPrice = nowPrice;
     }
 
     public List<ColorSwatch> getColorSwatches() {

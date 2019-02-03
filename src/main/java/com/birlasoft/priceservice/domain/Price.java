@@ -1,17 +1,14 @@
 package com.birlasoft.priceservice.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Price {
 
     private double was;
     private double then1;
     private double then2;
-    private NowPrice nowPrice;
+    private double now;
     private String currency;
-    private String nowPrice1;
 
     public double getWas() {
         return was;
@@ -37,12 +34,12 @@ public class Price {
         this.then2 = then2;
     }
 
-    public NowPrice getNowPrice() {
-        return nowPrice;
+    public double getNow() {
+        return now;
     }
 
-    public void setNowPrice(NowPrice nowPrice) {
-        this.nowPrice = nowPrice;
+    public void setNow(double now) {
+        this.now = now;
     }
 
     public String getCurrency() {
@@ -51,13 +48,5 @@ public class Price {
 
     public void setCurrency(String currency) {
         this.currency = currency;
-    }
-
-    public String getNowPrice1() {
-        return nowPrice1;
-    }
-
-    public void setNowPrice1(String nowPrice1) {
-        this.nowPrice1 = this.currency + this.nowPrice.getTo();
     }
 }

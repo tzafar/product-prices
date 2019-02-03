@@ -12,8 +12,13 @@ import java.util.Map;
 public class Config {
 
     public static Map<String, String> colorMapper = new HashMap<>();
+    public static Map<String, String> currencyMapper = new HashMap<>();
     {
         colorMapper.put("white","ffffff");
+
+        currencyMapper.put("GBP","£");
     }
+
+
 
 }
